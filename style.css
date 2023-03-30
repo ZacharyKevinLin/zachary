@@ -1,0 +1,794 @@
+/*背景*/
+body {
+    background: hsla(0, 0%, 0%, 1);
+    background: linear-gradient(360deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 1) 29%, hsla(224, 46%, 16%, 1) 47%, hsla(227, 44%, 36%, 1) 66%, hsla(226, 77%, 24%, 1) 84%, hsla(0, 0%, 0%, 1) 100%);
+    background: -moz-linear-gradient(360deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 1) 29%, hsla(224, 46%, 16%, 1) 47%, hsla(227, 44%, 36%, 1) 66%, hsla(226, 77%, 24%, 1) 84%, hsla(0, 0%, 0%, 1) 100%);
+    background: -webkit-linear-gradient(360deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 1) 29%, hsla(224, 46%, 16%, 1) 47%, hsla(227, 44%, 36%, 1) 66%, hsla(226, 77%, 24%, 1) 84%, hsla(0, 0%, 0%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+    width: 1280px;
+    margin: 0;
+    padding: 0;
+}
+
+/*側欄*/
+nav {
+    font-weight: bolder;
+    float: left;
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    font-size: 1.5em;
+    /*元素的定位方式設置為固定定位，使其不隨頁面滾動而移動。*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    z-index: 1;
+}
+
+html,
+body {
+    /*側欄背景*/
+    height: 100%;
+}
+
+.side-menu {
+    /*側邊選單中的表單元素*/
+    width: 12%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 0%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px hsla(240, 50%, 20%, .6);
+}
+
+.side-menu button {
+    /*元素的寬度為 50 像素*/
+    width: 50px;
+}
+
+nav a {
+    /*設置為塊級元素*/
+    display: block;
+    /*內容和邊緣的填充值*/
+    padding: 10px;
+    /*顏色為白色*/
+    color: #fff;
+    /*下劃線樣式為無*/
+    text-decoration: none;
+    /*定位方式為相對定位*/
+    position: relative;
+}
+
+nav a+a::before {
+    /*添加了一個帶有上邊框的樣式*/
+    /*偽元素的內容設置為空字符串*/
+    content: '';
+    /*於最近的已定位祖先元素進行定位*/
+    position: absolute;
+    /*頂部邊緣定位在其包含塊的頂部*/
+    top: 0;
+    /*右邊緣定位在其包含塊的右邊緣右側的 10 像素處*/
+    right: 10px;
+    /*左邊緣定位在其包含塊的左邊緣左側的 10 像素處*/
+    left: 10px;
+    /*頂部創建一條寬度為 1 像素、顏色為白色並帶有 40％ 不透明度的實線邊框*/
+    border-top: 1px solid rgba(255, 255, 255, .4);
+}
+
+nav a .tou {
+    /*側欄文字特效*/
+    /*右側向左偏移 1.1 個字元的寬度，將其隱藏起來*/
+    margin-right: -1.1em;
+    /*右比例縮放設置為 0，將其隱藏起來*/
+    transform: scale(0);
+    /*以 0.3 秒的時間進行過渡效果*/
+    transition: .3s;
+}
+
+nav a:hover .tou {
+    /*在滑鼠懸停 */
+    /*右側偏移量設置為 0，將其顯示出來*/
+    margin-right: 0em;
+    /*比例縮放設置為 1，將其顯示出來*/
+    transform: scale(1);
+}
+
+/*主要頁面*/
+section {
+    width: 1300px;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+    left: 18%;
+}
+
+Title1 {
+    /*大標*/
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    -webkit-text-stroke: 1px hsl(174, 100%, 73%);
+    text-shadow: 0px 0px 1em #78C0E0, 0px 0px 0.5em #419ac0;
+    display: flex;
+}
+
+Title2 {
+    color: #f7f3f3;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0px 0px 1em #78C0E0, 0px 0px 0.5em #419ac0;
+}
+
+hr {
+    background-image: linear-gradient(to right, #ffffff, #ffffff00);
+    height: 1px;
+    width: 100%;
+    /*設置分隔線的邊框為無*/
+    border: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    flex: 1 1 50%;
+
+}
+
+.box-shadow {
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.text {
+    flex: 1 1 50%;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+}
+
+.title3 {
+    color: #6f6969;
+    font-size: 20px;
+}
+
+.bible {
+    font-family: 'Pacifico', cursive;
+    font-size: 15px;
+    color: #ffffff;
+    text-shadow: 0px 0px 1em #e1ff00, 0px 0px 0.5em #6f554f;
+}
+
+table {
+    color: #ffffff;
+    white-space: nowrap;
+    font-size: 25px;
+    padding: 5px;
+}
+
+th,
+td {
+    padding: 10px;
+    /*設定單元格內邊距*/
+    text-align: center;
+    /*文字置中*/
+}
+
+thead {
+    background-color: #c2a9f5;
+    /*表頭背景顏色*/
+    color: white;
+    /*表頭文字顏色*/
+}
+
+tbody {
+    background-color: #FCDFFF;
+    /*表格主體背景顏色*/
+    color: #4C4C4C;
+    /*表格主體文字顏色*/
+}
+
+/*鼠標滑過時，行背景顏色改變*/
+tbody tr:hover {
+    background-color: #FFEFD5;
+}
+
+code {
+    color: #ffffff;
+    margin-left: 700px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.jumpbox1 {
+    animation: jumpbox1 2s infinite;
+}
+
+@keyframes jumpbox1 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 6px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.jumpbox2 {
+    animation: jumpbox2 2s infinite;
+}
+
+@keyframes jumpbox2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(6px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*財務會計學*/
+.fa {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: fa 3s ease-in-out forwards infinite;
+}
+
+@keyframes fa {
+    0% {
+        width: 36px;
+    }
+
+    100% {
+        width: 360px;
+    }
+}
+
+/*成本會計學*/
+.ca {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: ca 3s ease-in-out forwards infinite;
+}
+
+@keyframes ca {
+    0% {
+        width: 40px;
+    }
+
+    100% {
+        width: 400px;
+    }
+}
+
+/*管理會計學*/
+.ma {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: ma 3s ease-in-out forwards infinite;
+}
+
+@keyframes ma {
+    0% {
+        width: 40px;
+    }
+
+    100% {
+        width: 400px;
+    }
+}
+
+/*高等會計學*/
+.aa {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: aa 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes aa {
+    0% {
+        width: 34px;
+    }
+
+    100% {
+        width: 340px;
+    }
+}
+
+/*稅務會計學*/
+.ta {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: ta 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ta {
+    0% {
+        width: 38px;
+    }
+
+    100% {
+        width: 380px;
+    }
+}
+
+/*審計學*/
+.au {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: au 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes au {
+    0% {
+        width: 30px;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+/*財務報表分析*/
+.fas {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: fas 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes fas {
+    0% {
+        width: 40px;
+    }
+
+    100% {
+        width: 400px;
+    }
+}
+
+/*公司法*/
+.cl {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: cl 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes cl {
+    0% {
+        width: 37px;
+    }
+
+    100% {
+        width: 370px;
+    }
+}
+
+/*證券交易法*/
+.sl {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: sl 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes sl {
+    0% {
+        width: 35px;
+    }
+
+    100% {
+        width: 350px;
+    }
+}
+
+/*Python*/
+.py {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: py 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes py {
+    0% {
+        width: 25px;
+    }
+
+    100% {
+        width: 250px;
+    }
+}
+
+/*Java*/
+.ja {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: ja 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ja {
+    0% {
+        width: 20px;
+    }
+
+    100% {
+        width: 200px;
+    }
+}
+
+/*Html5*/
+.ht {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: ht 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ht {
+    0% {
+        width: 25px;
+    }
+
+    100% {
+        width: 250px;
+    }
+}
+
+/*SQL*/
+.sql {
+    width: 100px;
+    margin-left: 60px;
+    height: 20px;
+    background-color: #ffd28d;
+    animation: sql 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes sql {
+    0% {
+        width: 10px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
+
+.floatleft {
+    float: left
+}
+
+/*漢語＿聽*/
+.ch-l {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ch-l 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ch-l {
+    0% {
+        width: 30px;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+/*漢語＿說*/
+.ch-s {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ch-s 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ch-s {
+    0% {
+        width: 30px;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+/*漢語＿讀*/
+.ch-r {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ch-r 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ch-r {
+    0% {
+        width: 28px;
+    }
+
+    100% {
+        width: 280px;
+    }
+}
+
+/*漢語＿寫*/
+.ch-w {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ch-w 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ch-w {
+    0% {
+        width: 30px;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+/*英文＿聽*/
+.en-l {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: en-l 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes en-l {
+    0% {
+        width: 10px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
+
+/*英文＿說*/
+.en-s {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: en-s 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes en-s {
+    0% {
+        width: 15px;
+    }
+
+    100% {
+        width: 150px;
+    }
+}
+
+/*英文＿讀*/
+.en-r {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: en-r 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes en-r {
+    0% {
+        width: 6px;
+    }
+
+    100% {
+        width: 60px;
+    }
+}
+
+/*英文＿寫*/
+.en-w {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: en-w 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes en-w {
+    0% {
+        width: 3px;
+    }
+
+    100% {
+        width: 30px;
+    }
+}
+
+/*閩南＿聽*/
+.ml-l {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ml-l 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ml-l {
+    0% {
+        width: 25px;
+    }
+
+    100% {
+        width: 250px;
+    }
+}
+
+/*閩南＿說*/
+.ml-s {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ml-s 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ml-s {
+    0% {
+        width: 15px;
+    }
+
+    100% {
+        width: 150px;
+    }
+}
+
+/*閩南＿讀*/
+.ml-r {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ml-r 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ml-r {
+    0% {
+        width: 6px;
+    }
+
+    100% {
+        width: 60px;
+    }
+}
+
+/*閩南＿寫*/
+.ml-w {
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+    background-color: #bb7fff;
+    animation: ml-w 3s ease-in-out forwards infinite;
+
+}
+
+@keyframes ml-w {
+    0% {
+        width: 3px;
+    }
+
+    100% {
+        width: 30px;
+    }
+}
+
+.container3 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.left3,
+.right3 {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.left3 img,
+.right3 img {
+    max-width: 100%;
+    height: auto;
+    opacity: 30%;
+    filter: grayscale(50%);
+}
+
+.left3 img:hover,
+.right3 img:hover {
+    opacity: 100%;
+    filter: grayscale(0%);
+}
+
+
+.middle3 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+
+.border-radius{
+    border-radius: 15% 5%;
+}
